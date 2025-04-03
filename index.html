@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Salary Comprobator</h2>
+    <p>Enter your salary and see if you are rich or poor</p>
+    <input id="salary">
+<button type="button" onclick="SalaryCalculator()">Submit</button>
+<p id="resultado"></p>
+
+<script>
+function SalaryCalculator() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("salary").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (isNaN(x)) {
+    text = "Input not valid";
+  } else if(x>=2000){
+    text = "Unfortunately you are rich";
+  }else{
+    text = "You are poor,HA HA";
+  }
+  document.getElementById("resultado").innerHTML = text;
+}
+</script>
+</body>
+</html>
