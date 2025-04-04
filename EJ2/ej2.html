@@ -13,12 +13,14 @@
     </style>
 </head>
 <body>
-    <div id="capa">
+    <div onmouseover="cambiarcolor()" id="capa">
         Hola
     </div>
     <button   id="boton_amarillo" onclick="amarillo()">Cambiar a color amarilla</button>
     <button  id="boton_rojo" onclick="rojo()">Cambiar a color rojo</button>
     <button id="boton_verde" onclick="verde()">Cambiar a color verde</button>
+    <button id="ocultar_botones" onclick="ocultar_botones()">Ocultar capa</button>
+    <button id="mostrar_botones" onclick="mostrar_botontes()">Mostrar capa</button>
 
     <script>
         function amarillo(){
@@ -29,6 +31,15 @@
         }
         function verde(){
             document.getElementById("capa").style.backgroundColor = "green";
+        }
+        function ocultar_botones(){
+            document.getElementById("capa").style.visibility = "hidden";
+        }
+        function mostrar_botontes(){
+            document.getElementById("capa").style.visibility = "visible";
+        }
+        function cambiarcolor(){
+            document.getElementById("capa").style.backgroundColor = "blue";
         }
     </script>
 
