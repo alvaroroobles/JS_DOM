@@ -1,62 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Salary Comprobator</h2>
     <p>Enter your salary and see if you are rich or poor</p>
-    <input id="salary">
-<button type="button" onclick="SalaryCalculator()">Submit</button>
-<p id="resultado"></p>
+    <input id="salary" />
+    <button type="button" onclick="SalaryCalculator()">Submit</button>
+    <p id="resultado"></p>
 
-<script>
-function SalaryCalculator() {
-  // Pillar la variable que meta el usuario"
-  let x = document.getElementById("salary").value;
-  // Ahora un if
-  let text;
-  if (isNaN(x)) {
-    text = "Input not valid";
-  } else if(x>=2500){
-    text = "Unfortunately you are rich";
-  }else{
-    text = "You are poor,HA HA";
-  }
-  document.getElementById("resultado").innerHTML = text;
-}
-</script>
+    <script>
+      function SalaryCalculator() {
+        // Pillar la variable que meta el usuario"
+        let x = document.getElementById("salary").value;
+        // Ahora un if
+        let text;
+        if (isNaN(x)) {
+          text = "Input not valid";
+        } else if (x >= 2500) {
+          text = "Unfortunately you are rich";
+        } else {
+          text = "You are poor,HA HA";
+        }
+        document.getElementById("resultado").innerHTML = text;
+      }
+    </script>
 
-<h2>Indice de Masa Corporal</h2>
-<p>Ingrese su peso</p>
-<input id="peso">
-<p>Ingrese su altura</p>
-<input id="altura">
-<button type="button" onclick="IMC()">Calcular IMC</button>
-<p id="resultado1"></p>
+    <h2>Indice de Masa Corporal</h2>
+    <p>Ingrese su peso</p>
+    <input id="peso" />
+    <p>Ingrese su altura</p>
+    <input id="altura" />
+    <button type="button" onclick="IMC()">Calcular IMC</button>
+    <p id="resultado1"></p>
 
-<script>
-    function IMC() {
+    <script>
+      function IMC() {
         const peso = document.getElementById("peso").value;
         const altura = document.getElementById("altura").value;
         let resultado;
-        let IMC= peso / (altura * altura);
+        let IMC = peso / (altura * altura);
 
         if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
-            resultado = "Ingrese un valor valido";
-        }else if (IMC < 18.5) {
-            resultado = "Su IMC es menor a 18.5, de tipo insuficiente";
-        }else if (IMC >= 18.5 && IMC < 25) {
-            resultado = "Su IMC es mayor a 18.5 y menor a 25, de tipo normal";
-        }else if (IMC >= 25 && IMC < 30) {
-            resultado = "Su IMC es mayor a 25 y menor a 30, de tipo sobrepeso";
-        }else if (IMC >= 30) {
-            resultado = "Su IMC es mayor a 30, de tipo obesidad";
+          resultado = "Ingrese un valor valido";
+        } else if (IMC < 18.5) {
+          resultado = "Su IMC es menor a 18.5, de tipo insuficiente";
+        } else if (IMC >= 18.5 && IMC < 25) {
+          resultado = "Su IMC es mayor a 18.5 y menor a 25, de tipo normal";
+        } else if (IMC >= 25 && IMC < 30) {
+          resultado = "Su IMC es mayor a 25 y menor a 30, de tipo sobrepeso";
+        } else if (IMC >= 30) {
+          resultado = "Su IMC es mayor a 30, de tipo obesidad";
         }
-        document.getElementById("resultado1").innerHTML = resultado+"y su valor es "+IMC.toFixed(2);
- }
-</script>
-</body>
+        document.getElementById("resultado1").innerHTML =
+          resultado + "y su valor es " + IMC.toFixed(2);
+      }
+    </script>
+    <h2>Descuentos</h2>
+    <p>Ingrese el precio de su producto</p>
+    <input id="precio" />
+    <p>Ingrese el descuento de su producto</p>
+    <input id="descuento" />
+    <button type="button" onclick="descuento()">Calcular precio</button>
+    <p id="precioFinal"></p>
+
+    <script>
+      function descuento() {
+        const precio = document.getElementById("precio").value;
+        const descuento = document.getElementById("descuento").value;
+        let resultado;
+
+        if (isNaN(precio) || isNaN(descuento) || precio <= 0 || descuento <= 0) {
+          resultado = "Ingrese un valor valido";
+        } else {
+          resultado = "Su precio es " + (precio - descuento).toFixed(2);
+        }
+        document.getElementById("precioFinal").innerHTML = resultado;
+      }
+    </script>
+  </body>
 </html>
