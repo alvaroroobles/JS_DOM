@@ -34,18 +34,17 @@ function SalaryCalculator() {
 <input id="peso">
 <p>Ingrese su altura</p>
 <input id="altura">
-<br>
-<button type="button" onclick="IMC()">Submit</button>
-<p id="IMC"></p>
+<button type="button" onclick="IMC()">Calcular IMC</button>
+<p id="resultado1"></p>
 
 <script>
     function IMC() {
-        let peso = document.getElementById("peso").value;
-        let altura = document.getElementById("altura").value;
+        const peso = document.getElementById("peso").value;
+        const altura = document.getElementById("altura").value;
         let resultado;
         let IMC= peso / (altura * altura);
 
-        if (isNaN(peso) || isNaN(altura)) {
+        if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
             resultado = "Ingrese un valor valido";
         }else if (IMC < 18.5) {
             resultado = "Su IMC es menor a 18.5, de tipo insuficiente";
@@ -56,7 +55,7 @@ function SalaryCalculator() {
         }else if (IMC >= 30) {
             resultado = "Su IMC es mayor a 30, de tipo obesidad";
         }
-        document.getElementById("IMC").innerHTML = resultado;
+        document.getElementById("resultado1").innerHTML = resultado;
  }
 </script>
 </body>
