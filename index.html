@@ -76,7 +76,7 @@
         if (isNaN(precio) || isNaN(descuento) || precio <= 0 || descuento <= 0) {
           resultado = "Ingrese un valor valido";
         } else {
-          resultado = "Su precio es " + precioFinal.toFixed(2);
+          resultado = "Su precio es " + precioFinal.toFixed(2)+"$";
         }
         document.getElementById("precioFinal").innerHTML = resultado;
       }
