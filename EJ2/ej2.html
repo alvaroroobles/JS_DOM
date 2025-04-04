@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #capa{
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="capa">
+        Hola
+    </div>
+    <button   id="boton_amarillo" onclick="amarillo()">Cambiar a color amarilla</button>
+    <button  id="boton_rojo" onclick="rojo()">Cambiar a color rojo</button>
+    <button id="boton_verde" onclick="verde()">Cambiar a color verde</button>
+
+    <script>
+        function amarillo(){
+            document.getElementById("capa").style.backgroundColor = "yellow";
+        }
+        function rojo(){
+            document.getElementById("capa").style.backgroundColor = "red";
+        }
+        function verde(){
+            document.getElementById("capa").style.backgroundColor = "green";
+        }
+    </script>
+
+
+</body>
+</html>
