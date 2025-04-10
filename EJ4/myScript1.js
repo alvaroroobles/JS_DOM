@@ -4,6 +4,7 @@ btn.addEventListener("click", validar);
 
 function validar() {
     let length = password.value.length;
+    
     if(length<12){
         alert("La contraseña es demasiado corta");
     }else{
