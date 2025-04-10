@@ -15,11 +15,6 @@
    boton_mostrar.addEventListener("click",mostrar_botones);
 
 
-function rojo(){
-   capa.style.background = "red";
-}
-
-
 
 function amarillo(){
     capa.style.backgroundColor = "yellow";
