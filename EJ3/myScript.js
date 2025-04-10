@@ -15,5 +15,5 @@ function addTask() {
     listado.appendChild(li);
 
     // Limpiamos el input
-    input_task.value = "";
+    input_task.value = " ";
 }
