@@ -26,7 +26,7 @@
             // Usamos .value para sacar el valor del input del usuario
             let num = userNumber.value;
             if(isNaN(num)){
-                alert("Ingrese un número");
+                resultado.innerHTML = "Introduce un número válido";
             }else if(numeroAleatorio > num){
                 resultado.innerHTML = "El numero aleatorio es mayor";
                 intentos++;
