@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="contenedor">
+    <h1> Modo Fácil (0-100)</h1>
+    <input type="text" id="num" placeholder="Introduce un número entre 0 y 100">
+    <button id="btn" onclick="comprobarNumero()">Enviar</button>
+    <p id="resultado"></p>
+    <p id="numIntentos"></p>
+    </div>
+
+    <script>
+        const numeroAleatorio = Math.floor(Math.random() * 101);
+        let intentos = 0;
+        const userNumber= document.getElementById("num");
+        const numIntentos = document.getElementById("numIntentos");
+        const btn = document.getElementById("btn");
+
+        function comprobarNumero(){
+            // Usamos .value para sacar el valor del input del usuario
+            let num = userNumber.value;
+            if(isNaN(num)){
+                alert("Ingrese un número");
+            }else if(numeroAleatorio > num){
+                resultado.innerHTML = "El numero aleatorio es mayor";
+                intentos++;
+                numIntentos.innerHTML = "Intentos: "+intentos;
+            }else if(numeroAleatorio < num){
+                resultado.innerHTML = "El numero aleatorio es menor";
+                intentos++;
+                numIntentos.innerHTML = "Intentos: "+intentos;
+            }else{
+                resultado.innerHTML = "El numero aleatorio es ese,has ganado!";
+            }
+        }
+
+    </script>
+</body>
+</html>
