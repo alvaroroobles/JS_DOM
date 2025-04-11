@@ -1,0 +1,17 @@
+dialog{
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#btn1{
+    background-color: transparent;
+    padding: 20px;
+    border: none;
+}
+
+#img1:hover{
+    transform: scale(0.7); 
+    transition: 0.2s;
+}

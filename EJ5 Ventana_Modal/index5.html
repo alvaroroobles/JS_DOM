@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1> Ventana Modal</h1>
@@ -13,7 +14,47 @@
     <br>
     <p>Lorem impsum  aksdla  asjdaossdj aniddasdisapsid asjdapsdaposjd asjdajsdajsd asjopdaojsdja</p>
     <br>
-    <button id="btn">Desplegar ventana Modal</button>
-    <script src="script.js"></script>
+
+    <button id="btn1" onclick="openImg()">
+    <img id="img1" src="comida.jpeg" alt="comida" width="100px">
+    </button>
+
+
+    <button id="btn" onclick="openModal()">Desplegar ventana Modal</button>
+
+    <dialog id="myModal">
+        <h2> Hola, soy un modal</h2>
+        <p>Lorem impsum  aksdla  asjdaossdj aniddasdisapsid asjdapsdaposjd asjdajsdajsd asjopdaojsdja</p>
+        <br>
+        <p>Lorem impsum  aksdla  asjdaossdj aniddasdisapsid asjdapsdaposjd asjdajsdajsd asjopdaojsdja</p>
+        <br>
+        <p>Lorem impsum  aksdla  asjdaossdj aniddasdisapsid asjdapsdaposjd asjdajsdajsd asjopdaojsdja</p>
+        <button id="btnCloseModal" onclick="closeModal()">Cerrar ventana Modal</button>
+    </dialog>
+
+    <dialog id="myFoto">
+        <img id="img" src="comida.jpeg" alt="comida" width="50%">
+        <button id="btnCloseModal" onclick="closeImg()">Cerrar ventana Modal</button>
+    </dialog>
+
+    <script>
+    const modal = document.querySelector('#myModal');
+    const img = document.querySelector('#myFoto');
+        function openModal() {
+            modal.showModal();
+        }
+
+        function closeModal() {   
+            modal.close();
+        }
+        
+        function openImg(){
+            img.showModal();
+        }
+
+        function closeImg(){
+            img.close();
+        }
+    </script>
 </body>
 </html>
