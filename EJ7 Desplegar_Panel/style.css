@@ -1,0 +1,7 @@
+.contenedor{
+    display: none;
+}
+
+.active{
+    display: block;
+}
