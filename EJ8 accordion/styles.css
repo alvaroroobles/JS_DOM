@@ -1,3 +1,12 @@
 .accordion-item{
     display: flex;
+    gap: 20px;
+}
+
+.accordion-content{
+    display: none;
+}
+
+.active{
+    display: block;
 }
