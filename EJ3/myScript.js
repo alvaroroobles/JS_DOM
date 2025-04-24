@@ -4,6 +4,8 @@ const input_task = document.getElementById("task");
 
 btn_task.addEventListener("click", addTask);
 
+
+//ESTO NO CAE
 function addTask() {
     const li= document.createElement("li");
     const p = document.createElement("p");
