@@ -6,10 +6,15 @@ const boton_imagen = document.getElementById("boton_imagen");
 const imagen = document.getElementById("imagen");
 const boton_z = document.getElementById("boton_z");
 
+const boton_modal= document.getElementById("botonModal");
+
 boton.addEventListener("click", sqrt);
 boton_tarea.addEventListener("click", addTask);
 boton_imagen.addEventListener("click", toggleImagen);
 boton_z.addEventListener("click", arriba);
+boton_z.addEventListener("click", rojo);
+
+boton_modal.addEventListener("click", dialog);
 
 
   // Esta función calcula la raíz cuadrada de un número
@@ -42,4 +47,19 @@ boton_z.addEventListener("click", arriba);
 
 function arriba(){
     imagen2.classList.toggle("zindex");
+    imagen2.style.backgroundColor = "red";
+}
+
+function rojo(){
+    let div= document.getElementById("div1");
+    div1.style.backgroundColor = "red";
+}
+
+function dialog(){
+    document.getElementById("textoculto").display = "flex";
+}
+
+function close(){
+    let dialogo= document.querySelector("dialog");
+    dialogo.close();
 }
